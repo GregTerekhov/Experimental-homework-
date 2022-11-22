@@ -44,3 +44,6 @@ $breakpoints: (
   'pre-large': ( max-width: 1199px ),
   'large': ( min-width: 1200px ),
 ) !default;
+
+$animation-duration: 1000ms;
+$animation-delay: 2000ms;

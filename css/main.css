@@ -1380,6 +1380,13 @@ summary {
   color: #2196f3;
 }
 
+.animate__animated.animate__fadeInUp {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
 @media (min-width: 1200px) {
   .features {
     padding-bottom: 0;
