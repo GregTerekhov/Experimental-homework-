@@ -1,0 +1,37 @@
+.clients__list {
+  @extend %list;
+  @include pageList;
+
+  @include respondTo('large') {
+    flex-wrap: nowrap;
+  }
+}
+
+.clients__item {
+  @include listLayout(2);
+
+  @include respondTo('medium') {
+    @include listLayout(3);
+  }
+
+  @include respondTo('large') {
+    @include listLayout(4);
+  }
+}
+
+.clients__logo {
+  @include centeredFlex();
+  @include padding(16px, null, 16px, null);
+  color: getColor('link-nonactive');
+  @include borderStyle ($color: getColor('link-nonactive'));
+  @include transition(color, border-color);
+  
+  @include hoFus {
+    border-color: getColor('accent');
+    color: getColor('accent')
+  }
+}
+
+.clients__icon {
+    @extend %icon;
+}

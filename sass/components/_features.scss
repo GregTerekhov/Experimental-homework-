@@ -1,0 +1,52 @@
+.features {
+    @include respondTo('large') {
+        padding-bottom: 0;
+    }
+}
+
+.features__list {
+    @extend %list;
+
+    @include respondTo('medium') {
+        @include pageList;
+    }
+}
+
+.features__item {
+
+    & + & {
+        @include respondTo('pre-medium') {
+            @include margin(30px, null, null, null);
+        }
+    }
+
+    @include respondTo('medium') {
+        @include listLayout(2);
+    }
+
+    @include respondTo('large') {
+        @include listLayout(4);
+    }
+}
+
+.features__thumb {
+    @include padding(25px, null, 25px, null);
+    @include margin(null, null, 30px, null);
+    text-align: center;
+
+    background-color: getColor('background-tertiary');
+    @include rounded(4px);
+}
+
+.features__subtitle {
+    @include textUpperCase($mb: 10px);
+
+    @include respondTo('pre-medium') {
+        text-align: center;
+    }
+}
+
+.features__descr {
+    @extend %margin-padding-reset;  
+    @include fontType($weight: 400, $size: 14px, $lh: 1.714, $color: getColor('text-secondary'));
+}

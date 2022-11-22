@@ -1,0 +1,26 @@
+%margin-padding-reset {
+  margin: 0;
+  padding: 0;
+}
+
+%list {
+  @extend %margin-padding-reset;
+  list-style: none;
+}
+
+%icon {
+  fill: currentColor;
+}
+
+%is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+%appearance {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

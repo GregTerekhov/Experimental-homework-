@@ -1,0 +1,23 @@
+.logo {
+  @include link();
+  @include fontType($size: 24px, $lh: 1.174, $color: getColor('accent'));
+  font-family: $logo-font-stack;
+  @include padding(16px, null, 16px, null);
+
+  @include respondTo('medium') {
+    padding: 0;
+  }
+
+  @include respondTo('large') {
+    font-size: 26px;
+    line-height: 1.383;
+  }
+
+  &--black-piece {
+    color: getColor('logo-header');
+  }
+
+  &--white-piece {
+    color: getColor('logo-footer');
+  }
+}

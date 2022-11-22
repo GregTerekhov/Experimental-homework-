@@ -1,0 +1,29 @@
+.mobile-network {
+    @extend %list;
+    display: flex;
+}
+
+.mobile-network__item {
+    @include centeredFlex();
+}
+
+.mobile-network__link {
+    @include link();
+    @include fontType($weight: 400, $size: 12px, $lh: 1.222, $ls: 0.02em, $color: getColor('accent'));
+    @include hoFus {
+        color: getColor('mobile-link-hover');
+    }
+
+    @include respondTo('little') {
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.mobile-network__line {
+    @extend %margin-padding-reset;
+    width: 22px;
+    height: 0;
+    @include borderStyle($color: getColor('border-modal-input'), $rad: 0);
+    @include transform(rotate(90deg));
+}

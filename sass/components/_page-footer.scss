@@ -1,0 +1,75 @@
+.page-footer {
+    background-color: getColor('background-secondary');
+    @include padding(60px, null, 60px, null);
+}
+
+.page-footer__box {    
+    
+    @include respondTo('large') {
+        @include centeredFlex($justify-content: space-between, $align-items: baseline);
+    }
+}
+
+.page-footer__info {
+
+    @include respondTo('medium') {
+        @include centeredFlex($justify-content: space-around, $align-items: baseline);
+        @include margin(null, null, 60px, null);
+    }
+
+    @include respondTo('large') {
+        @include margin(null, null, 0, null);
+    }
+}
+
+.page-footer__wrap {
+    text-align: center;
+    @include margin(null, null, 60px, null);
+
+    @include respondTo('medium') {
+        @include margin(null, null, 0, null);
+    }
+
+    @include respondTo('large') {
+        @include margin(null, 70px, null, null);
+        text-align: left;
+    }
+}
+
+.page-footer__logo {
+    @extend .logo;
+    display: block;
+    padding: 0;
+    @include margin(null, null, 20px, null);
+
+    @include respondTo('pre-large') {
+        text-align: center;
+    }
+}
+
+.page-footer__contacts {
+    font-style: normal; 
+}
+
+.page-footer__item {
+    @include respondTo('large') {
+        width: 231px;
+    }
+}
+
+.page-footer__socials {
+    @include margin(null, null, 60px, null);
+
+    @include respondTo('medium') {
+        @include margin(null, null, 0, null);
+    }
+    
+    @include respondTo('large') {
+        @include margin(null, 93px, null, null);
+    }
+}
+
+.page-footer__link {
+    background-color: getColor('background-footer-network');
+    color: getColor('social-icons-white');
+}

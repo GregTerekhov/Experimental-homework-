@@ -1,0 +1,18 @@
+.page-header {
+    border-bottom: 1px solid getColor('border-header');
+}
+
+.page-header__navigation {
+    
+    @include respondTo ('medium') {
+        @include centeredFlex($justify-content: flex-start);
+    }
+}
+
+.page-header__contacts {
+  
+    @include respondTo('large') {
+      @include centeredFlex();
+      gap: 50px;
+    }
+}

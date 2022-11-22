@@ -1,0 +1,34 @@
+.activity {
+    @include respondTo('pre-large') {
+        display: none;
+    }
+
+    @include respondTo('large') {
+        padding-bottom: 94px;
+    }
+}
+
+.activity__list {
+    @extend %list;
+    @include pageList($fwrap: nowrap);
+}
+
+.activity__thumb {
+    @include relative(0);
+    overflow: hidden;
+  
+    @include centeredFlex();
+  
+    z-index: -1;
+
+    &::before {
+        @include decorElement ($height: 70px, $bgc: getColor('background-activity-label'));
+        bottom: 0;
+    }
+}
+
+.activity__label {
+    @include textUpperCase($color: getColor('text-tertiary'), $mb: 0);
+    @include absolute (bottom 0);
+    @include padding(27px, null, 27px, null);
+}

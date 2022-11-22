@@ -1,0 +1,42 @@
+.hero {
+    text-align: center;
+}
+
+.hero__overlay {
+    @include centeredFlex();
+    @include centeredElement($maxwidth: 480px);
+    @include backgroundImageRetina($file: 'mobile-hero');
+    
+    padding: 118px 0;
+
+    @include respondTo('medium') {
+            max-width: 768px;
+            @include backgroundImageRetina($file: 'tablet-hero');        
+    }
+
+    @include respondTo('large') {
+            max-width: 1600px;
+            padding: 200px 0;
+            @include backgroundImageRetina($file: 'desktop-hero');    
+    }
+}
+
+.hero__title {
+    @include centeredElement($maxwidth: 360px);
+    @include fontType($weight: 900, $size: 26px, $lh: 1.615, $ls: 0.06em, $align: center, $transform: uppercase, $color: getColor('text-tertiary'));
+    @include margin(null, null, 30px, null);
+
+    @include respondTo('large') {
+        max-width: 696px;
+        font-size: 44px;
+        line-height: 1.363;
+    }
+}
+
+.hero__button {
+    @include margin(0, auto, 0, auto);
+
+    @include respondTo('large') {
+        width: 216px
+    }
+}

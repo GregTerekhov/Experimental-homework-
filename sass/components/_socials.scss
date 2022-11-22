@@ -1,0 +1,28 @@
+.socials__call {
+    @include footerCalls;
+
+    @include respondTo('pre-large') {
+        text-align: center;
+    }
+}
+
+.socials__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials__link {
+    @include centeredFlex();
+    @include socialLinks($color: getColor('link-nonactive'), $background: getColor('background-primary'));
+
+    @include hoFus {
+        background-color: getColor('accent');
+        color: getColor('social-icons-white')
+    }
+}
+
+.socials__icon {
+    @extend %icon;
+}

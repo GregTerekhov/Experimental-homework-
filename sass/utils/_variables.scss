@@ -1,0 +1,46 @@
+$colors: ( 
+  'accent': #2196f3,
+  'background-primary': #ffffff,
+  'background-secondary': #2f303a,
+  'background-tertiary': #f5f4fa,
+  'background-activity-label': rgba(47, 48, 58, 0.8),
+  'background-footer-network': rgba(255, 255, 255, 0.1),
+  'background-modal-overlay': rgba(0, 0, 0, 0.2),
+  'border-button-close': rgba(0, 0, 0, 0.1),
+  'border-cards': #eeeeee,
+  'border-checkbox': #212121,
+  'border-header': #ececec,
+  'border-modal-input': rgba(33, 33, 33, 0.2),
+  'border-subscr-input':rgba(255, 255, 255, 0.3),
+  'primary-button-hover': #188ce8,
+  'button-mobile-menu': #000000,
+  'button-modal-close': #000000,
+  'gradient-hero': rgba(47, 48, 58, 0.4),
+  'social-icons-white': #ffffff,
+  'link-nonactive': #afb1b8,
+  'mobile-link-hover': #188ce8,
+  'logo-footer': #ffffff,
+  'logo-header': #000000,
+  'overlay-cards': rgba(33, 150, 243, 0.9),
+  'placeholder-footer': rgba(255, 255, 255, 0.6),
+  'placeholder-modal': rgba(117, 117, 117, 0.5),
+  'text-primary': #212121,
+  'text-secondary': #757575,
+  'text-tertiary': #ffffff,
+  'text-footer-contacts': rgba(255, 255, 255, 0.6),
+);
+
+$text-font-stack: "Roboto", sans-serif;
+$logo-font-stack: 'Raleway', sans-serif;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$enable-rounded: true;
+
+$breakpoints: (
+  'pre-little': ( max-width: 479px ),
+  'little': ( min-width: 480px ),
+  'small': ( min-width: 576px ),
+  'pre-medium': ( max-width: 767px ),
+  'medium': ( min-width: 768px ),
+  'pre-large': ( max-width: 1199px ),
+  'large': ( min-width: 1200px ),
+) !default;

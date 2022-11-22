@@ -1,0 +1,33 @@
+.mobile-menu {
+    @extend %list;
+}
+
+.mobile-menu__item:not(:last-child) {
+  @include margin(null, null, 40px, null);
+
+  @include respondTo('little') {
+    @include margin(null, null, 32px, null);
+  }
+}
+
+.mobile-menu__link {
+    @include link();
+    @include fontType($weight: 400, $size: 26px, $ls: 0.02em);
+
+    @include respondTo('pre-little') {
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    @include respondTo('little') {
+      font-weight: 500;
+      font-size: 40px;
+    } 
+    
+    &--current {
+      color: getColor('accent');
+      @include hoFus {
+        color: getColor('mobile-link-hover');
+    }
+    }
+}

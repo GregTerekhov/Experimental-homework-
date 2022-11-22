@@ -1,0 +1,44 @@
+.modal-container {
+    width: 450px;
+    @include padding(40px, 40px, 40px, 40px);
+  
+    background-color: getColor('background-primary');
+  
+    @include boxShadow(1);
+    @include rounded(4px);
+    @include transform(translateX(-50%) scale(1) rotate(0));
+    @include transition(transform);
+
+    .backdrop.is-hidden & {
+        @include transform(translateX(-50%) scale(0.5) rotate(180deg));
+
+        @include respondTo('large') {
+            @include transform(translate(-50%, -50%) scale(0.5) rotate(180deg));
+        }
+    }
+
+    @include respondTo('pre-little') {
+        width: 320px;
+    }
+
+    @include respondTo('large') {
+        width: 528px;
+        @include transform(translate(-50%, -50%) scale(1) rotate(0));
+    }
+}
+
+.modal-container__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-container__button {
+    @include absolute(top 8px right 8px);
+    @include centeredFlex();
+    @include controlBtn($padding-y: 6px, $padding-x: 6px, $color: getColor('button-modal-close'), $bgc: getColor('background-primary'));
+    @include borderStyle($color: getColor('border-button-close'), $rad: 50%);
+}
+
+.modal-container__icon {
+    @extend %icon;
+}

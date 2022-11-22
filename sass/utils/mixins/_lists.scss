@@ -1,0 +1,13 @@
+// Міксини списків------------------------------------------
+// Міксин калькуляції розміщення елементів в списку
+// Параметр {$numberOfElement} визначає необхідну кількість елементів в рядку
+@mixin listLayout($numberOfElement) {
+    width: calc((100% - 30px * ($numberOfElement - 1)) / $numberOfElement);
+  }
+
+// Міксин списку проекту
+@mixin pageList($display: flex, $fwrap: wrap, $gap: 30px)  {
+  display: $display;
+  flex-wrap: $fwrap;
+  gap: $gap;
+}

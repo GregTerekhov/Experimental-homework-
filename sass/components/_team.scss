@@ -1,0 +1,65 @@
+.team {
+    background-color: getColor('background-tertiary');
+}
+
+.team__list {
+    @extend %list;
+    
+    @include respondTo('medium') {
+        @include pageList;
+    }
+
+    @include respondTo('large') {
+        flex-wrap: nowrap;
+    }
+}
+
+.team__item {
+    
+    & + & {
+        @include respondTo('pre-medium') {
+            @include margin(30px, null, null, null);
+        }
+    }
+
+    @include respondTo('medium') {
+        @include listLayout(2);
+    }
+
+    @include respondTo('large') {
+        @include listLayout(4);
+    }
+}
+
+.team__wrap {
+    @include boxShadow(1);
+    @include rounded(0px 0px 4px 4px);
+}
+
+.team__meta {
+    @include padding(30px, null, 24px, null);
+    background-color: getColor('background-primary');
+  
+    @include rounded(0px 0px 4px 4px);
+
+    @include respondTo('large') {
+        padding-bottom: 30px;
+    }
+}
+
+.team__name {
+    @extend %margin-padding-reset;
+    @include fontType($weight: 500, $align: center);
+    @include margin(null, null, 10px, null);
+}
+
+.team__descr {
+    @extend %margin-padding-reset;
+    @include fontType($weight: 400, $align: center, $transform: capitalize, $color: getColor('text-secondary'));
+    @include margin(null, null, 16px, null);
+}
+
+.team__icon {
+    @extend %icon;
+    @include transition(fill);
+}

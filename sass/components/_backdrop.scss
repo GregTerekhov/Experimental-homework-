@@ -1,0 +1,13 @@
+.backdrop {
+    background-color: getColor('background-modal-overlay');
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    @include transition(opacity, visibility);
+    overflow-y: scroll;
+
+    &.is-hidden {
+        @extend %is-hidden;
+    }
+}
+
